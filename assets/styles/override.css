@@ -1,0 +1,190 @@
+html{
+    background-color: #fcfcfc;
+}
+
+
+.color_gray{
+    color: rgb(146, 146, 146);
+}
+
+.custom-color_blue{
+   color: rgb(0, 160, 255); 
+}
+
+.header-content{
+    background-color: white;
+    width: 100vw;
+    height :100px;
+    max-width: 100%; 
+    line-height: 100px;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+.color_white{
+    background-color: white;
+    border-color: black;
+}
+
+.font-style_header{
+    font-family: WorkSans-Light;
+    color: rgb(48, 48, 48);
+    font-weight: 300;
+    font-size: 16px;
+    
+}
+
+.collapsible {
+  background-color: rgb(48, 48, 48);
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible:hover {
+  background-color: rgb(48, 48, 48);
+}
+
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: rgb(48, 48, 48);
+}
+.content-block{
+    display: block;
+}
+
+.sidebar-desktop_color{
+    background:  linear-gradient(-45deg, rgb(239, 243, 248) 0%, rgb(231, 246, 255) 100%);
+   
+    min-height: 100%;
+   height: 100vw;
+    overflow-y: hidden;
+    
+}
+
+.custom-card{
+    
+    border-radius: 3px;
+    box-shadow: 2px 2px 30px 2px rgba(0, 0, 0, 0.08);
+}
+
+.img-mobile{
+    border-radius:50%;
+    width: 180px;
+    height : 180px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+.sidenav-font{
+   
+height: 11px;
+color: rgb(252, 252, 252);
+
+font-family: Roboto-Medium;
+font-weight: 500;
+letter-spacing: 1.17px;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(48, 48, 48);
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+
+@media (max-width:1024px){
+    
+    .display-none_mobile{
+    display: none;
+}
+    .my-margin_left.slds-m-left_large{
+        margin-left: 0rem;
+    }
+    
+ .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+        
+}
+
+@media screen and (min-width:1024px){
+    
+    .display-none_desktop{
+        display: none;
+    }
+    
+    .container{
+      border-radius: 3px;
+      box-shadow: 2px 2px 30px 2px rgba(0, 0, 0, 0.08);
+        background-color: white;
+    }
+    
+    .card_desktop.slds-card{
+        border-left: none;
+        border-right: none;
+        border-top: none;
+    }
+    
+    .custom-card{
+        height: 100px;
+        margin-bottom: 0px;
+        border-bottom: 1px solid #dddbda;
+        box-shadow: none;
+        border-radius: 0px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+      .custom-top_card{
+        margin-top: 30px;
+         border-bottom: none;
+    }
+    
+    .img-mobile{
+        width: 50px;
+        height :50px;
+        margin-left: none;
+        
+    }
+    
+    .custom-line_height{
+        line-height: 100px;
+    }
+    
+    .card_desktop.slds-m-around_xx-large{
+        margin: 0px 30px;
+    }
+    
+    .sidenav_desktop-color{
+        color: black;
+    }
+    .text-list_desktop{
+        font-size:0.900rem;
+        font-weight: 300;
+    }
+    
+}
