@@ -17,32 +17,87 @@ function openNav() {
 function closeNav() {
   document.getElementById("mySidenav").style.width = "0";
 }
+/*   
+var coll = document.getElementsByClassName("collapsible");
+var i;
 
+for (i = 0; i < coll.length; i++) {
+    
+  coll[i].addEventListener("click", function() {
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+  */  
     
     function fun1(){
         var collapseElement = document.getElementById("button1");
-       
-    var content = collapseElement.nextElementSibling;
-    if (content.style.display === "block") {
-      content.style.display = "none";
-        console.log("none");
-    } else {
-      content.style.display = "block";
-        console.log("block");
+        var content = collapseElement.nextElementSibling;
+        if (content.style.display === "block") {
+          content.style.display = "none";
+        } else {
+          content.style.display = "block";
+        }
     }
-    }
-    function fun2(){
+    
+    function fun2(){ 
         var collapseElement = document.getElementById("button2");
-       
-    var content = collapseElement.nextElementSibling;
-    if (content.style.display === "block") {
-      content.style.display = "none";
-        console.log("none");
-    } else {
-      content.style.display = "block";
-        console.log("block");
+        var content = collapseElement.nextElementSibling;
+        if (content.style.display === "block") {
+          content.style.display = "none"; 
+        } 
+        else {
+          content.style.display = "block"; 
+        }
     }
+    
+    function fun3(){
+        var collapseElement = document.getElementById("button3");
+        var content = collapseElement.nextElementSibling;
+        if (content.style.display === "block") {
+          content.style.display = "none";
+        } 
+        else {
+          content.style.display = "block";
+        }
     }
+    
+    function fun4(){
+        var collapseElement = document.getElementById("button4");
+        var content = collapseElement.nextElementSibling;
+        if (content.style.display === "block") {
+          content.style.display = "none";
+        } 
+        else {
+          content.style.display = "block";
+        }
+    }
+    
+    function fun5(){
+        var collapseElement = document.getElementById("button5");
+        var content = collapseElement.nextElementSibling;
+        if (content.style.display === "block") {
+          content.style.display = "none";
+        } 
+        else {
+          content.style.display = "block";
+        }
+    }
+    
+    function card_view(){
+        var d = document.getElementById("firstdiv");
+       d.classList.remove("slds-large-size_1-of-12")
+        d.classList.add("slds-large-size_1-of-1");
+    }
+    
+    function list_view(){
+        
+    }
+
     
 </script>
 
@@ -99,8 +154,8 @@ function closeNav() {
     </header>
     
     <div id="mySidenav" class="sidenav sidenav-font display-none_desktop">
-       <div class="slds-text-align_center">
-       <p>ROCKS</p>
+       <div class="slds-text-align_center slds-m-bottom_large">
+       <p class="slds-text-heading_large">ROCKS</p>
        <p>PLATFORM</p>
        </div>
 
@@ -111,30 +166,31 @@ function closeNav() {
 <div class="content">
  <li class="slds-m-left_large">Account Summary</li>
 </div>
-<button type="button" class="collapsible slds-m-left_medium slds-border_bottom">INVESTMENT ></button>
+<button type="button" class="collapsible slds-m-left_medium slds-border_bottom" id="button3" onclick="fun3()">INVESTMENT ></button>
 <div class="content">
-  
+  <li class="slds-m-left_large">My Investments</li>
+    <li class="slds-m-left_large">Investor List</li>
 </div>
 <button type="button" class="collapsible slds-m-left_medium slds-border_bottom" id="button1" onclick="fun1()">DOCUMENTS ></button>
 <div class="content content-block">
   <ul>
-      <li class="slds-m-left_large">Tax</li>
-      <li class="slds-m-left_large">Legal</li>
-      <li class="slds-m-left_large">Updates</li>
-      <li class="slds-m-left_large">Financial Staements</li>
-      <li class="slds-m-left_large">Capital Statements</li>
-      <li class="slds-m-left_large">Annual Meeting</li>
+      <li class="slds-m-left_large slds-m-bottom_medium">Tax</li>
+      <li class="slds-m-left_large slds-m-bottom_medium">Legal</li>
+      <li class="slds-m-left_large slds-m-bottom_medium">Updates</li>
+      <li class="slds-m-left_large slds-m-bottom_medium">Financial Staements</li>
+      <li class="slds-m-left_large slds-m-bottom_medium">Capital Statements</li>
+      <li class="slds-m-left_large slds-m-bottom_medium">Annual Meeting</li>
     
     
     </ul>
 </div>
-        <button type="button" class="collapsible slds-m-left_medium slds-border_bottom">TRANSACTION ></button>
+        <button type="button" class="collapsible slds-m-left_medium slds-border_bottom" id="button4" onclick="fun4()">TRANSACTION ></button>
 <div class="content">
-
+<li class="slds-m-left_large">My Transaction</li>
 </div>
-        <button type="button" class="collapsible slds-m-left_medium slds-border_bottom">DELEGATE ></button>
+        <button type="button" class="collapsible slds-m-left_medium slds-border_bottom" id="button5" onclick="fun5()">DELEGATE ></button>
 <div class="content">
-  
+  <li class="slds-m-left_large">My Delegate</li>
 </div>
       
 </div>
@@ -168,9 +224,9 @@ function closeNav() {
             <li class="slds-p-vertical_small">My Delegate</li>
             </ul>
        
-        
         </ul>
     </div>
+        
     <div class="slds-col slds-large-size_10-of-12">
         <div class="slds-col slds-large-size_12-of-12 display-none_mobile">
         <div class="slds-grid slds-wrap slds-m-around_xx-large">
@@ -214,14 +270,14 @@ function closeNav() {
                </div>
             </div>
             <div class="slds-col slds-large-size_1-of-8">
-               <span class="slds-icon_container slds-icon-standard-account slds-m-right_x-small" title="Description of icon when needed">
+               <span class="slds-icon_container slds-icon-standard-account slds-m-right_x-small" title="Description of icon when needed" onclick="cards_view">
                   <svg class="slds-icon" aria-hidden="true">
                     <use xlink:href="assets/icons/standard-sprite/svg/symbols.svg#apps_admin"></use>
                   </svg>
                   <span class="slds-assistive-text">Description of icon when needed</span>
               </span>
                 
-                <span class="slds-icon_container slds-icon-standard-account slds-m-right_medium" title="Description of icon when needed">
+                <span class="slds-icon_container slds-icon-standard-account slds-m-right_medium" title="Description of icon when needed" onclick="list_view">
                   <svg class="slds-icon" aria-hidden="true">
                     <use xlink:href="assets/icons/utility-sprite/svg/symbols.svg#rows"></use>
                   </svg>
@@ -280,7 +336,7 @@ function closeNav() {
          <div class="slds-card custom-card slds-text-align_center card_desktop slds-m-around_xx-large ">
         <div class="slds-grid slds-wrap ">
     
-              <div class="slds-col slds-size_1-of-1 slds-large-size_1-of-12">
+              <div id="firstdiv" class="slds-col slds-size_1-of-1 slds-large-size_1-of-12">
                <img class="slds-m-around_large slds-avatar_circle slds-align_absolute-center img-mobile custom-line_height" src="User_Accounts_alt.png">
               </div>
 
@@ -309,16 +365,17 @@ function closeNav() {
               </div>
 
               <div class="slds-col slds-border_top slds-p-vertical_medium slds-size_1-of-1 display-none_desktop ">
-                    <p style="color: rgb(0, 160, 255)">View Details</p>
+                    <p class="custom-color_blue" >View Details</p>
               </div>
             
-            <div class="slds-col display-none_mobile slds-large-size_2-of-12 custom-color_blue custom-line_height">
-                    <span style="color: rgb(0, 160, 255);">View</span>
+              <div class="slds-col display-none_mobile slds-large-size_2-of-12 custom-color_blue custom-line_height">
+                    <span class="custom-color_blue">View</span>
               </div>
 
-
-              <div class="slds-col slds-large-size_1-of-12 display-none_mobile custom-line_height">
-                 ...
+              <div class="slds-col slds-order_1 slds-large-size_1-of-12 custom-line_height display-none_mobile">
+                      <svg class="slds-icon_xx-small slds-icon-text-default" aria-hidden="true">
+                        <use xlink:href="assets/icons/utility-sprite/svg/symbols.svg#threedots"></use>
+                      </svg>
               </div>
     
         </div>
@@ -335,7 +392,7 @@ function closeNav() {
                 <span>Chinmay Sarasvati</span>
               </div>
 
-              <div class="slds-col  slds-m-bottom_medium color_gray display-none_desktop slds-size_1-of-1">
+              <div class="slds-col slds-m-bottom_medium color_gray display-none_desktop slds-size_1-of-1">
                 <span>abcdef@xyz.com</span>
               </div>
 
@@ -356,16 +413,17 @@ function closeNav() {
               </div>
 
               <div class="slds-col slds-border_top slds-p-vertical_medium slds-size_1-of-1 display-none_desktop ">
-                    <p class="custom-color_blue" style="color: rgb(0, 160, 255)">View Details</p>
+                    <p class="custom-color_blue" >View Details</p>
               </div>
             
-            <div class="slds-col display-none_mobile slds-large-size_2-of-12 custom-color_blue custom-line_height">
-                    <span style="color: rgb(0, 160, 255);">View</span>
+              <div class="slds-col display-none_mobile slds-large-size_2-of-12 custom-color_blue custom-line_height">
+                    <span class="custom-color_blue">View</span>
               </div>
 
-
-              <div class="slds-col slds-large-size_1-of-12 display-none_mobile custom-line_height">
-                 ...
+              <div class="slds-col slds-order_1 slds-large-size_1-of-12 custom-line_height display-none_mobile">
+                      <svg class="slds-icon_xx-small slds-icon-text-default" aria-hidden="true">
+                        <use xlink:href="assets/icons/utility-sprite/svg/symbols.svg#threedots"></use>
+                      </svg>
               </div>
     
         </div>
@@ -402,22 +460,23 @@ function closeNav() {
               </div>
 
               <div class="slds-col slds-border_top slds-p-vertical_medium slds-size_1-of-1 display-none_desktop ">
-                    <p class="custom-color_blue" style="color: rgb(0, 160, 255)">View Details</p>
+                    <p class="custom-color_blue" >View Details</p>
               </div>
             
-            <div class="slds-col display-none_mobile slds-large-size_2-of-12 custom-color_blue custom-line_height">
-                    <span style="color: rgb(0, 160, 255);">View</span>
+              <div class="slds-col display-none_mobile slds-large-size_2-of-12 custom-color_blue custom-line_height">
+                    <span class="custom-color_blue">View</span>
               </div>
 
-
               <div class="slds-col slds-large-size_1-of-12 display-none_mobile custom-line_height">
-                 ...
+                      <svg class="slds-icon_xx-small slds-icon-text-default" aria-hidden="true">
+                        <use xlink:href="assets/icons/utility-sprite/svg/symbols.svg#threedots"></use>
+                      </svg>
               </div>
     
         </div>
     </div>
-                  
-                      <div class="slds-card custom-card slds-text-align_center card_desktop slds-m-around_xx-large">
+
+        <div class="slds-card custom-card slds-text-align_center card_desktop slds-m-around_xx-large">
         <div class="slds-grid slds-wrap ">
     
               <div class="slds-col slds-size_1-of-1 slds-large-size_1-of-12">
@@ -449,31 +508,26 @@ function closeNav() {
               </div>
 
               <div class="slds-col slds-border_top slds-p-vertical_medium slds-size_1-of-1 display-none_desktop ">
-                    <p class="custom-color_blue" style="color: rgb(0, 160, 255)">View Details</p>
+                    <p class="custom-color_blue" >View Details</p>
               </div>
             
             <div class="slds-col display-none_mobile slds-large-size_2-of-12 custom-color_blue custom-line_height">
-                    <span style="color: rgb(0, 160, 255);">View</span>
+                    <span class="custom-color_blue">View</span>
               </div>
 
-
-              <div class="slds-col slds-large-size_1-of-12 display-none_mobile custom-line_height">
-                 ...
+              <div class="slds-col slds-large-size_1-of-12 custom-line_height display-none_mobile">
+                  
+                      <svg class="slds-icon_xx-small slds-icon-text-default" aria-hidden="true">
+                        <use xlink:href="assets/icons/utility-sprite/svg/symbols.svg#threedots"></use>
+                      </svg>
               </div>
     
         </div>
     </div>
-                  
-                  
-                  
-        
     </div>
     
     </div>
 
     </div>
-    
-
-   
 </body>
 </html>
